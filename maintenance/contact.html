@@ -14,7 +14,10 @@
 
         <!-- Contact Form with Formspree -->
         <div class="contact-form">
-            <form action="https://formsubmit.co/akedofficial22@gmail.com" method="POST">
+<!--             <form action="https://formsubmit.co/akedofficial22@gmail.com" method="POST"> -->
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="4a58603d-8a53-4dce-bc36-2c7f881f4bb4">
+                
                 <label for="name">Your Name</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
                 
@@ -23,13 +26,12 @@
                 
                 <label for="message">Your Message</label>
                 <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                
-                <input type="hidden" name="_redirect" value="https://aked-official.github.io/maintenance/thank_you.html">
-                <!-- <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"> -->
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+<!--            <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+                <input type="hidden" name="redirect" value="https://aked-official.github.io/maintenance/thank_you.html">
                 <button type="submit">Send</button>
             </form>
-            
-
         </div>
 
         <!-- Back to Maintenance Page Link -->
